@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import '../models/recipe.dart';
 import '../providers/recipe_providers.dart';
 import '../widgets/voice_audio_mini_player.dart';
@@ -20,17 +19,7 @@ class RecipeDetailScreen extends ConsumerWidget {
       appBar: AppBar(
         title: Text(recipe.getTitle(lang)),
         actions: [
-          // Padding(
-          //   padding: const EdgeInsets.symmetric(horizontal: 8),
-          //   child: ChoiceChip(
-          //     label: Text(audioLang == AppLanguage.en ? 'Audio: EN' : 'အသံ: မြန်မာ'),
-          //     selected: true,
-          //     onSelected: (_) {
-          //       ref.read(audioLanguageProvider.notifier).state =
-          //           audioLang == AppLanguage.en ? AppLanguage.mm : AppLanguage.en;
-          //     },
-          //   ),
-          // )
+         
         ],
       ),
       body: SingleChildScrollView(

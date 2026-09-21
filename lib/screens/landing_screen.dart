@@ -102,7 +102,7 @@ class LandingScreen extends ConsumerWidget {
                     );
                   },
                   child: Text(
-                    lang == AppLanguage.en ? 'Get Started' : 'စတင်ရန်',
+                    lang == AppLanguage.en ? 'Get Started' : 'Get Started',
                     style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
