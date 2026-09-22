@@ -21,7 +21,7 @@ class _RecipeDetailScreenState extends ConsumerState<RecipeDetailScreen> {
     final lang = ref.watch(languageProvider);
     final audioLang = ref.watch(audioLanguageProvider);
     final theme = Theme.of(context);
-    final colorScheme = theme.colorScheme;
+
     const accentAmber = Color(0xFFFFB300);
 
     if (recipe == null) {
@@ -34,7 +34,6 @@ class _RecipeDetailScreenState extends ConsumerState<RecipeDetailScreen> {
       backgroundColor: Colors.white,
       body: CustomScrollView(
         slivers: [
-          // Full-width Hero Image with overlay back button and play/progress bar
           SliverToBoxAdapter(
             child: Stack(
               children: [
@@ -49,7 +48,6 @@ class _RecipeDetailScreenState extends ConsumerState<RecipeDetailScreen> {
                     child: const Center(child: Icon(Icons.broken_image, size: 50)),
                   ),
                 ),
-                // Gradient scrim for readability
                 Positioned.fill(
                   child: DecoratedBox(
                     decoration: BoxDecoration(
@@ -65,8 +63,7 @@ class _RecipeDetailScreenState extends ConsumerState<RecipeDetailScreen> {
                     ),
                   ),
                 ),
-                // Top App Bar Icons
-                SafeArea(
+               SafeArea(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     child: Row(
@@ -85,14 +82,11 @@ class _RecipeDetailScreenState extends ConsumerState<RecipeDetailScreen> {
                     ),
                   ),
                 ),
-                // Bottom Audio/Video progress bar mockup inside image
                 
               ],
             ),
           ),
-
-          // Overlapping White Bottom Sheet Container
-          SliverToBoxAdapter(
+ SliverToBoxAdapter(
             child: Transform.translate(
               offset: const Offset(0, -20),
               child: Container(
@@ -104,10 +98,6 @@ class _RecipeDetailScreenState extends ConsumerState<RecipeDetailScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Chef Profile Section
-                   
-
-                    // Instruction / Tips & Variants Tabs Pill Row
                     Row(
                       children: [
                         GestureDetector(
@@ -140,9 +130,7 @@ class _RecipeDetailScreenState extends ConsumerState<RecipeDetailScreen> {
                       ],
                     ),
                     const SizedBox(height: 28),
-
-                    // Vertical Timeline Steps with Amber Line & Node
-                    ListView.builder(
+ ListView.builder(
                       itemCount: recipe.steps.length,
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
@@ -153,8 +141,7 @@ class _RecipeDetailScreenState extends ConsumerState<RecipeDetailScreen> {
                         return Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            // Timeline Column (Dot + Vertical Line)
-                            Column(
+                           Column(
                               children: [
                                 Container(
                                   width: 14,
@@ -173,7 +160,6 @@ class _RecipeDetailScreenState extends ConsumerState<RecipeDetailScreen> {
                               ],
                             ),
                             const SizedBox(width: 16),
-                            // Step Content
                             Expanded(
                               child: Padding(
                                 padding: EdgeInsets.only(bottom: isLast ? 0 : 32),
