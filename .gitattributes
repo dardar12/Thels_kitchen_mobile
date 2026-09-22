@@ -1,0 +1,8 @@
+linux/** linguist-generated
+windows/** linguist-generated
+macos/** linguist-generated
+ios/** linguist-generated
+android/** linguist-generated
+*.cpp linguist-generated
+*.h linguist-generated
+*.cmake linguist-generated

@@ -9,7 +9,7 @@ class LandingScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    const heroImagePath = 'assets/images/img_landing.png';
+    const heroImagePath = 'assets/images/img_landing1.png';
 
     final lang = ref.watch(languageProvider);
     final themeMode = ref.watch(themeModeProvider);

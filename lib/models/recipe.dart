@@ -50,7 +50,7 @@ const mockRecipes = [
     titleMm: 'ကြက်အူချောင်းဆီပြန်ဟင်း',
     descriptionEn: 'Quick and savory sausage curry with tomatoes and onions.',
     descriptionMm: 'ကြက်အူချောင်းခရမ်းချဉ်သီးဆီပြန်ဟင်း',
-    imageUrl: 'assets/images/img_recipe1.png',
+    imageUrl: 'assets/images/img_recipe2.png',
     ingredientsEn: [
       'Sausages',
       'Onions (2)',
@@ -76,8 +76,8 @@ const mockRecipes = [
     steps: [
       RecipeStep(
         stepNumber: 1,
-        instructionEn: 'Slice the sausages and fry them.',
-        instructionMm: 'ကြက်အူချောင်းကိုရေဆေးပြီးလှီးပြီးကြော်မောင်မောင်။',
+        instructionEn: 'Slice the sausages and fry them,Mg Mg',
+        instructionMm: 'ကြက်အူချောင်းကိုရေဆေးပြီး လှီးပြီးကြော်မောင်မောင်',
         audioPathEn: 'assets/audios/nh_8_3.m4a',
         audioPathMm: 'assets/audios/nh_8_3.m4a',
       ),
@@ -90,15 +90,15 @@ const mockRecipes = [
       ),
       RecipeStep(
         stepNumber: 3,
-        instructionEn: 'Add the fried sausages, sliced green chilies, and a little more water.',
-        instructionMm: 'ကြော်ထားတဲ့ကြက်အူချောင်းထည့်၊ ငရုတ်သီးစိမ်းနည်းနည်းလှီးထည့်၊ ရေနဲနဲထပ်ထည့်ပါ။',
+        instructionEn: 'Add the fried sausages, sliced green chilies, and a little more water,Mg Mg',
+        instructionMm: 'ကြော်ထားတဲ့ကြက်အူချောင်းထည့်၊ ငရုတ်သီးစိမ်းနည်းနည်းလှီးထည့်၊ ရေနဲနဲထပ်ထည့်မောင်မောင်',
         audioPathEn: 'assets/audios/nh_8_4.m4a',
         audioPathMm: 'assets/audios/nh_8_4.m4a',
       ),
       RecipeStep(
         stepNumber: 4,
         instructionEn: 'Simmer until the water dries up and the oil separates. Ready, Mg Mg!',
-        instructionMm: 'ရေခမ်း ဆီပြန်၊ ရပြီမောင်မောင်။',
+        instructionMm: 'ရေခမ်း ဆီပြန်ရင်  ရပြီမောင်မောင်',
         audioPathEn: 'assets/audios/nh_8_4.m4a',
         audioPathMm: 'assets/audios/nh_8_4.m4a',
       ),

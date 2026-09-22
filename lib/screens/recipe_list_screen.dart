@@ -44,7 +44,7 @@ class RecipeListScreen extends ConsumerWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                 // အဟောင်းနေရာမှာ ဒါထည့်ပါ
+               
 Image.asset(
   recipe.imageUrl,
   height: 200,
