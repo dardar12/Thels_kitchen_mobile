@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:thels_kitchen/screens/anniversary_unlock_screen.dart';
 import '../models/recipe.dart';
 import '../providers/recipe_providers.dart';
-import 'recipe_list_screen.dart';
+
 
 class LandingScreen extends ConsumerWidget {
   const LandingScreen({super.key});
@@ -20,7 +21,6 @@ class LandingScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          // Language Toggle
           IconButton(
             icon: Text(
               lang == AppLanguage.en ? '🇲🇲 ' : '🇬🇧 ',
@@ -31,7 +31,6 @@ class LandingScreen extends ConsumerWidget {
                   lang == AppLanguage.en ? AppLanguage.mm : AppLanguage.en;
             },
           ),
-          // Theme Switch Toggle
           IconButton(
             icon: Icon(
               isDark ? Icons.light_mode : Icons.dark_mode,
@@ -76,8 +75,8 @@ class LandingScreen extends ConsumerWidget {
               const SizedBox(height: 12),
               Text(
                 lang == AppLanguage.en
-                    ? 'This app is made for you by Thel Thel, Mg Mg . Check out the recipes, there are audio files too, hehe 😂! Thel carefully took notes and wrote this just for my sweet heart.'
-                    : 'ဒီ app က မောင်မောင့်အတွက် သဲသဲရေးထားပေးတာကွာ။ မောင်မောင်  ဟင်းချက်နည်းတွေ ကြည့်ကြည့်။ သဲသဲaudio file လဲပါတယ်မောင်မောင် ။ ဟဲဟဲ 😂 သဲသဲသေချာ note ထုတ်ပြီး ချစ်ဆုံးလေးအတွက် ရေးထားတာ',
+                    ? 'This app is made for you by Thel Thel, Mg Mg. Check out the recipes, there are audio files too, hehe 😂! Thel carefully took notes and wrote this just for my sweet heart.'
+                    : 'ဒီ app က မောင်မောင့်အတွက် သဲသဲရေးထားပေးတာကွာ။ မောင်မောင် ဟင်းချက်နည်းတွေ ကြည့်ကြည့်။ သဲသဲ audio file လဲပါတယ်မောင်မောင် ။ ဟဲဟဲ 😂 သဲသဲသေချာ note ထုတ်ပြီး ချစ်ဆုံးလေးအတွက် ရေးထားတာ',
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       color: isDark ? Colors.white : Colors.black,
                       height: 1.5,
@@ -94,15 +93,16 @@ class LandingScreen extends ConsumerWidget {
                     ),
                   ),
                   onPressed: () {
+                    // Changed to AnniversaryUnlockScreen
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const RecipeListScreen(),
+                        builder: (_) => const AnniversaryUnlockScreen(),
                       ),
                     );
                   },
                   child: Text(
-                    lang == AppLanguage.en ? 'Get Started' : 'Get Started',
+                    lang == AppLanguage.en ? 'Get Started' : 'စတင်ရန်',
                     style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
